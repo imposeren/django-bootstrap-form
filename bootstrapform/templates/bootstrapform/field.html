@@ -1,7 +1,7 @@
 {% load bootstrap %}
-<div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} required{% endif %}">
+<div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} required{% endif %}" id="div_{{ field.auto_id }}">
     {% if field|is_checkbox %}
-                <div class="controls" id="div_{{ field.id }}">
+                <div class="controls">
                     <label class="checkbox">
                         {{ field }} <span>{{ field.label }}</span>
                     </label>
