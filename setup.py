@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from bootstrapform.meta import VERSION
+from bootstrapform_too.meta import VERSION
 
 setup(
     name='django-bootstrap-form',
