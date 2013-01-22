@@ -1,4 +1,4 @@
-{% load bootstrap %}
+{% load bootstrap_any %}
 <div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} required{% endif %}" id="div_{{ field.auto_id }}">
     {% if field|is_checkbox %}
                 <div class="controls">
