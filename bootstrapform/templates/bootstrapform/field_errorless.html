@@ -1,0 +1,29 @@
+{% load bootstrap %}
+<div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} required{% endif %}" id="div_{{ field.auto_id }}">
+    {% if field|is_checkbox %}
+                <div class="controls">
+                    <label class="checkbox">
+                        {{ field }} <span>{{ field.label }}</span>
+                    </label>
+
+                    {% if field.help_text %}
+                    <p class="help-block">
+                        {{ field.help_text|safe }}
+                    </p>
+                    {% endif %}
+                </div>
+    {% else %}
+        <label class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label>
+
+        <div class="controls">
+            {{ field }}
+
+            {% if field.help_text %}
+            <p class="help-block">
+                {{ field.help_text|safe }}
+            </p>
+            {% endif %}
+
+        </div>
+    {% endif %}
+</div>
