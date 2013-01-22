@@ -1,4 +1,4 @@
-from bootstrapform.meta import VERSION
+from bootstrapform_too.meta import VERSION
 
 
 __version__ = str(VERSION)

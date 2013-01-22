@@ -9,15 +9,15 @@ def bootstrap(element):
     element_type = element.__class__.__name__.lower()
 
     if element_type == 'boundfield':
-        template = get_template("bootstrapform/field.html")
+        template = get_template("bootstrapform_too/field.html")
         context = Context({'field': element})
     else:
         has_management = getattr(element, 'management_form', None)
         if has_management:
-            template = get_template("bootstrapform/formset.html")
+            template = get_template("bootstrapform_too/formset.html")
             context = Context({'formset': element})
         else:
-            template = get_template("bootstrapform/form.html")
+            template = get_template("bootstrapform_too/form.html")
             context = Context({'form': element})
 
     return template.render(context)
@@ -28,15 +28,15 @@ def bootstrap_errorless(element):
     element_type = element.__class__.__name__.lower()
 
     if element_type == 'boundfield':
-        template = get_template("bootstrapform/field_errorless.html")
+        template = get_template("bootstrapform_too/field_errorless.html")
         context = Context({'field': element})
     else:
         has_management = getattr(element, 'management_form', None)
         if has_management:
-            template = get_template("bootstrapform/formset_errorless.html")
+            template = get_template("bootstrapform_too/formset_errorless.html")
             context = Context({'formset': element})
         else:
-            template = get_template("bootstrapform/form_errorless.html")
+            template = get_template("bootstrapform_too/form_errorless.html")
             context = Context({'form': element})
 
     return template.render(context)
